@@ -15,48 +15,40 @@ Honeypot en Python que simula un panel de login y registra intentos de acceso y 
 - Flask
 
 ## Cómo ejecutarlo
-### 1. Clonar el repositorio
 
-``bash
-git clone https://github.com/tu-usuario/python-honeypot-lab.git
-cd python-honeypot-lab
+1. Clonar el repositorio 
+   ```bash
+    git clone https://github.com/tu-usuario/python-honeypot-lab.git
+    cd python-honeypot-lab
+   
+2. Crear entorno virtual
+   ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate
 
-### 2. Crear entorno virtual
+3. Instalar dependencias necesarias:
+   ```bash
+   pip install -r requirements.txt
 
-``bash 
-python3 -m venv .venv
-source .venv/bin/activate
+4. Ejecutar el honeypot
+   ```bash
+   python honeypot.py
 
-### 3. Instalar dependencias
-
-``bash 
-pip install -r requirements.txt
-
-### 4. Ejecutar el honeypot
-
-``bash 
-python honeypot.py
-
-### 5. Probar el honeypot
-
+5. Probar el honeypot
 Desde navegador accede a /login e introducir credenciales.
 Desde el terminal: 
+   ```bash
+   curl http://127.0.0.1:8080/admin
+    curl -X POST http://127.0.0.1:8080/login \
+    -d "username=admin&password=123456"
+   
+6. Ver logs generados 
+   ```bash
+   tail -f logs/events.jsonl
 
-``bash 
-curl http://127.0.0.1:8080/admin
-
-curl -X POST http://127.0.0.1:8080/login \
-  -d "username=admin&password=123456"
-
-### 6. Ver logs generados 
-
-``bash 
-tail -f logs/events.jsonl
-
-### 7. Ejecutar análisis de logs
-
-``bash 
-python analyze_logs.py
+7. Ejecutar análisis de logs
+   ```bash
+   python analyze_logs.py
 
 El script mostrará estadísticas sobre la actividad registrada. Obteniendo un resumen como el siguiente: 
 
