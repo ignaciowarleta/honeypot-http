@@ -18,7 +18,7 @@ Honeypot en Python que simula un panel de login y registra intentos de acceso y 
 
 1. Clonar el repositorio 
    ```bash
-    git clone https://github.com/tu-usuario/python-honeypot-lab.git
+    git clone https://github.com//python-honeypot-lab.git]
     cd python-honeypot-lab
    
 2. Crear entorno virtual
