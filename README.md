@@ -32,15 +32,15 @@ Forma parte de un laboratorio defensivo orientado a Blue Team y monitorización 
 
 ## Estructura del proyecto
    
-python-honeypot-lab/
-├── honeypot.py
-├── analyze_logs.py
-├── requirements.txt
-├── templates/
-│   └── login.html
-├── logs/
-│   └── events.jsonl
-└── README.md
+	python-honeypot-lab/
+	├── honeypot.py
+	├── analyze_logs.py
+	├── requirements.txt
+	├── templates/
+	│   └── login.html
+	├── logs/
+	│   └── events.jsonl
+	└── README.md
 
 ## Cómo ejecutarlo
 
