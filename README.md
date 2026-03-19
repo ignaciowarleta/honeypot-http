@@ -1,6 +1,14 @@
 # Python HTTP Honeypot
+# Python HTTP Honeypot
 
-## Descripción
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Flask](https://img.shields.io/badge/Flask-Web%20App-black)
+![Status](https://img.shields.io/badge/Status-Active-success)
+![Cybersecurity](https://img.shields.io/badge/Cybersecurity-Honeypot-red)
+![Blue Team](https://img.shields.io/badge/Blue%20Team-Lab-0A66C2)
+![Threat Detection](https://img.shields.io/badge/Focus-Threat%20Detection-orange)
+![Logs](https://img.shields.io/badge/Logs-JSONL-informational)
+[![Integration](https://img.shields.io/badge/Integration-Threat%20Intel%20Dashboard-purple)](https://github.com/ignaciowarleta/threat-intel-dashboard)
 
 Honeypot HTTP desarrollado en Python que simula un panel de autenticación expuesto con el objetivo de registrar actividad sospechosa y capturar intentos de acceso.
 
