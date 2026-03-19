@@ -80,26 +80,26 @@ Desde el terminal:
 
 El script mostrará estadísticas sobre la actividad registrada. Obteniendo un resumen como el siguiente: 
 
-=== Resumen de eventos ===
-request: 10
-suspicious_request: 5
-credential_attempt: 3
-
-=== Top 5 IPs ===
-127.0.0.1: 18
-
-=== Top 5 rutas ===
-/login: 8
-/admin: 4
-/wp-login.php: 3
-
-=== Top 5 user-agents ===
-curl/8.5.0: 6
-Mozilla/5.0: 12
-
-=== Usernames más probados ===
-admin: 2
-root: 1
+	=== Resumen de eventos ===
+	request: 10
+	suspicious_request: 5
+	credential_attempt: 3
+	
+	=== Top 5 IPs ===
+	127.0.0.1: 18
+	
+	=== Top 5 rutas ===
+	/login: 8
+	/admin: 4
+	/wp-login.php: 3
+	
+	=== Top 5 user-agents ===
+	curl/8.5.0: 6
+	Mozilla/5.0: 12
+	
+	=== Usernames más probados ===
+	admin: 2
+	root: 1
 
 ## Interpretación 
 
@@ -120,10 +120,11 @@ root: 1
 Los logs generados por este honeypot pueden utilizarse en el proyecto complementario Threat Intelligence Dashboard, diseñado para enriquecer y priorizar IPs sospechosas mediante fuentes públicas de threat intelligence.
 
 Flujo de uso:
-	1.	El honeypot registra eventos en logs/events.jsonl
-	2.	El dashboard extrae IPs únicas desde ese fichero
-	3.	Las IPs se enriquecen con reputación, geolocalización y scoring de riesgo
-	4.	Se priorizan las más sospechosas para su análisis
+
+1.	El honeypot registra eventos en logs/events.jsonl
+2.	El dashboard extrae IPs únicas desde ese fichero
+3.	Las IPs se enriquecen con reputación, geolocalización y scoring de riesgo
+4.	Se priorizan las más sospechosas para su análisis
 
 Esto permite construir un pequeño laboratorio defensivo compuesto por captura, análisis y priorización de amenazas.
 
