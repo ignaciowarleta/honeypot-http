@@ -1,18 +1,46 @@
 # Python HTTP Honeypot
 
 ## Descripción
-Honeypot en Python que simula un panel de login y registra intentos de acceso y actividad sospechosa.
+
+Honeypot HTTP desarrollado en Python que simula un panel de autenticación expuesto con el objetivo de registrar actividad sospechosa y capturar intentos de acceso.
+
+El proyecto permite monitorizar peticiones HTTP, detectar rutas frecuentemente utilizadas en escaneos automatizados y almacenar eventos en logs estructurados para su posterior análisis.
+
+Forma parte de un laboratorio defensivo orientado a Blue Team y monitorización básica de amenazas.
+
+---
 
 ## Funcionalidades
-- Captura de requests HTTP
-- Registro de credenciales
+
+- Captura de peticiones HTTP
+- Simulación de panel de login
+- Registro de credenciales introducidas
 - Detección de rutas sospechosas
-- Logs en JSON
-- Script de análisis de eventos
+- Almacenamiento de eventos en formato JSON Lines
+- Script de análisis de logs
+- Integración con un dashboard de threat intelligence para enriquecer IPs detectadas
+
+---
 
 ## Tecnologías
+
 - Python
 - Flask
+- JSON Lines
+
+---
+
+## Estructura del proyecto
+   
+python-honeypot-lab/
+├── honeypot.py
+├── analyze_logs.py
+├── requirements.txt
+├── templates/
+│   └── login.html
+├── logs/
+│   └── events.jsonl
+└── README.md
 
 ## Cómo ejecutarlo
 
@@ -86,4 +114,16 @@ root: 1
 - Identificar endpoints expuestos más atacados
 - Analizar intentos de autenticación
 - Simular un entorno básico de monitorización tipo SOC
+
+## Integración con [Threat Intelligence Dashboard](https://github.com/ignaciowarleta/threat-intel-dashboard) 
+
+Los logs generados por este honeypot pueden utilizarse en el proyecto complementario Threat Intelligence Dashboard, diseñado para enriquecer y priorizar IPs sospechosas mediante fuentes públicas de threat intelligence.
+
+Flujo de uso:
+	1.	El honeypot registra eventos en logs/events.jsonl
+	2.	El dashboard extrae IPs únicas desde ese fichero
+	3.	Las IPs se enriquecen con reputación, geolocalización y scoring de riesgo
+	4.	Se priorizan las más sospechosas para su análisis
+
+Esto permite construir un pequeño laboratorio defensivo compuesto por captura, análisis y priorización de amenazas.
 
