@@ -1,6 +1,7 @@
 # Python HTTP Honeypot
 
-![Python](https://img.shields.io/badge/Python-3.x-blue)
+
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
 ![Flask](https://img.shields.io/badge/Flask-Web%20App-black)
 ![Status](https://img.shields.io/badge/Status-Active-success)
 ![Cybersecurity](https://img.shields.io/badge/Cybersecurity-Honeypot-red)
